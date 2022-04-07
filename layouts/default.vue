@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-container>
+    <v-container fluid class="pa-0">
       <Nuxt />
     </v-container>
   </v-app>
@@ -9,6 +9,11 @@
 <script>
 export default {
   name: 'DefaultLayout',
-  data() {},
+  data: () => ({
+    
+  }),
+  create() {
+  
+  }
 }
 </script>
