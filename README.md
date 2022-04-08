@@ -3,7 +3,7 @@
 ## This is a WIP project
 
 I will try to improve this project more and more, always looking for the best practices and ways to maintain a fast application and clean code. I am totally open to criticism and suggestions.
-It's based on Coodesh challenge, but I pretend to go further and further.
+It's based on Coodesh challenge, but I pretend to go further.
 
 ## Build Setup
 
