@@ -31,6 +31,11 @@
         <v-card-subtitle v-if="patientId" class="ma-0 text-subtitle-2"
           >{{ patientId }}
         </v-card-subtitle>
+        <v-card-subtitle class="ma-0 text-subtitle-2">
+          <nuxt-link :to="`/patients/${patient.login.uuid}`">
+            Complete Informations
+          </nuxt-link>
+        </v-card-subtitle>
 
         <v-divider></v-divider>
 

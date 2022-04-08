@@ -26,7 +26,7 @@
         </template>
       </v-data-table>
     </v-card>
-    <v-row justify="center">
+    <v-row justify="center" class="mt-5">
       <!-- <v-col align="center">
         <v-btn icon @click="fetchPatients">
           <v-icon>mdi-cached</v-icon>
@@ -35,6 +35,7 @@
       </v-col> -->
     </v-row>
     <ProfileModal
+      v-if="Object.keys(patient).length"
       :modal="modal"
       :patient="patient"
       :click:outside="toggleModal"
@@ -74,31 +75,32 @@ export default {
     ...mapGetters('patients', ['getPatients']),
 
     patients() {
-      const patient = this.getPatients.patients.map((patient) => ({
+      const patients = this.getPatients.patients.map((patient) => ({
         ...patient,
         fullName: `${patient.name.first} ${patient.name.last}`,
         gender: patient.gender === 'female' ? 'Female' : 'Male',
       }))
-      return patient
+      return patients
+    },
+    specificPatient() {
+      const patients = this.patients
+
+      return patients.filter(
+        (patient) => patient.login.uuid === this.$route.query.userId
+      )
     },
   },
-
-  mounted() {
+  created() {
     this.fetchPatients()
   },
-
   methods: {
     ...mapActions('patients', ['findPatients']),
 
     async fetchPatients() {
-      this.$nuxt.$loading.start()
       try {
         await this.findPatients()
       } catch (error) {
-        this.$nuxt.$loading.finish()
         console.log(error)
-      } finally {
-        this.$nuxt.$loading.finish()
       }
     },
     toggleModal() {

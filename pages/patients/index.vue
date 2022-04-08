@@ -16,6 +16,10 @@
 export default {
   name: 'PatientsPage',
 
+  components: {
+    PatientsList: () => import('@/components/patients/PatientsList'),
+  },
+
   methods: {},
 }
 </script>

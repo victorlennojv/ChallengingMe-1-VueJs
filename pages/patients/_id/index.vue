@@ -3,8 +3,30 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
-  name: 'PatientDetails',
+  name: 'PatientCompleteProfile',
+
+  computed: {
+    ...mapGetters('patients', ['getPatients']),
+  },
+
+  mounted() {
+    this.fetchPatients()
+  },
+
+  methods: {
+    ...mapActions('patients', ['findPatients']),
+
+    async fetchPatients() {
+      try {
+        await this.findPatients()
+      } catch (error) {
+        console.log(error)
+      }
+    },
+  },
 }
 </script>
 
