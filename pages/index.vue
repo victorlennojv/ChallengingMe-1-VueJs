@@ -4,8 +4,10 @@
     <v-container>
       <v-row dense justify="center">
         <v-col cols="5">
-          <v-card color="indigo" dark>
-            <v-card-title class="text-h4"> Work In Progress </v-card-title>
+          <v-card color="indigo" dark class="text-center">
+            <v-card-title class="text-h4 justify-center">
+              Work In Progress
+            </v-card-title>
             <v-card-subtitle class="white--text text-subtitle-2">
               The main route is: "/patients"
               <br />
