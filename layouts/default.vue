@@ -9,11 +9,6 @@
 <script>
 export default {
   name: 'DefaultLayout',
-  data: () => ({
-    
-  }),
-  create() {
-  
-  }
+  middleware: 'auth',
 }
 </script>

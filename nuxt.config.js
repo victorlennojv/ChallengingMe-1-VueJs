@@ -75,4 +75,8 @@ export default {
   build: {
     analyze: false,
   },
+
+  router: {
+    // middleware: 'auth',
+  },
 }
