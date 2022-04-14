@@ -6,7 +6,7 @@ I will try to improve this project more and more, always looking for the best pr
 
 It's based on Coodesh challenge, but I pretend to go further.
 
-The design is not the initial focus.
+The design is not the initial focus but the structure.
 
 I'm using differents approachs for fetching data, it's on purpose. The focus is to learn concepts and practice.
 
