@@ -16,6 +16,7 @@
         :headers="headers"
         :items="patients"
         :search="search"
+        :loading="isLoading"
         loading-text="Loading... Please, wait"
         no-data-text="No patients found"
       >
@@ -67,6 +68,7 @@ export default {
           align: 'center',
         },
       ],
+      isLoading: false,
       modal: false,
       patient: {},
     }
@@ -97,9 +99,12 @@ export default {
     ...mapActions('patients', ['findPatients']),
 
     async fetchPatients() {
+      this.isLoading = true
       try {
         await this.findPatients()
+        this.isLoading = false
       } catch (error) {
+        this.isLoading = false
         console.log(error)
       }
     },

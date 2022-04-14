@@ -1,4 +1,4 @@
-export default {
+export default () => ({
   patients: [],
   pagination: {
     page: 1,
@@ -6,4 +6,4 @@ export default {
     seed: '',
     version: '',
   },
-}
+})
