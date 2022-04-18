@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pt-16">
+  <v-container class="pt-16 bg-color">
     <v-row justify="center" laign="center">
       <v-col class="col-8">
         <div class="mb-5">
@@ -24,4 +24,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.bg-color {
+  background-color: rgb(216, 216, 216);
+}
+</style>
