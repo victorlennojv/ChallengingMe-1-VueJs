@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app light class="bg-color">
     <v-container fluid class="pa-0">
       <Nuxt />
     </v-container>
@@ -12,3 +12,8 @@ export default {
   middleware: 'auth',
 }
 </script>
+<style scoped>
+.bg-color {
+  background-color: rgb(216, 216, 216);
+}
+</style>

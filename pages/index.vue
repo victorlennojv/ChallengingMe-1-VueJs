@@ -4,7 +4,7 @@
     <v-container>
       <v-row dense justify="center">
         <v-col cols="5">
-          <v-card color="indigo" dark class="text-center">
+          <v-card color="primary" dark class="text-center">
             <v-card-title class="text-h4 justify-center">
               Work In Progress
             </v-card-title>
@@ -15,7 +15,7 @@
             </v-card-subtitle>
           </v-card>
           <v-col class="text-center">
-            <v-btn class="ma-2" outlined color="indigo">
+            <v-btn class="ma-2" outlined color="primary">
               <nuxt-link to="/patients"> Go To Patients Page </nuxt-link>
             </v-btn>
           </v-col>
