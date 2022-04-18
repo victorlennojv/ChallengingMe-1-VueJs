@@ -8,7 +8,7 @@ It's based on Coodesh challenge, but I pretend to go further.
 
 The design is not the initial focus but the structure.
 
-I'm using differents approachs for fetching data, it's on purpose. The focus is to learn concepts and practice.
+I'm using differents approachs for fetching data, it's on purpose. The focus is to practice concepts.
 
 ## Build Setup
 
