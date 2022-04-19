@@ -1,8 +1,8 @@
 <template>
   <v-container class="pt-16 bg-color">
     <v-row justify="center" laign="center">
-      <v-col class="col-8">
-        <div class="mb-5">
+      <v-col class="col-sm-6 col-12">
+        <div class="mb-5 text-center">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
           fugiat a labore quos quam nisi porro veniam officia ad.
         </div>
