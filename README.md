@@ -4,8 +4,6 @@
 
 I will try to improve this project more and more, always looking for the best practices and ways to maintain a fast application and clean code. I am totally open to criticism and suggestions.
 
-It's based on Coodesh challenge, but I pretend to go further.
-
 The design is not the initial focus but the structure.
 
 I'm using differents approachs for fetching data, it's on purpose. The focus is to practice concepts.
