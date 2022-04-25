@@ -31,7 +31,7 @@
         </v-card>
       </v-col>
       <v-col class="col-12 col-sm-8">
-        <v-card color="rgba(0,0,0,0)">
+        <v-card color="#ddd">
           <v-tabs
             v-model="tab"
             background-color="transparent"
@@ -41,7 +41,7 @@
             <v-tabs-slider class="gradient-color"></v-tabs-slider>
 
             <!-- TODO Profile, Address and Login Components -->
-            <v-tab> About </v-tab>
+            <v-tab> Importante Notes </v-tab>
             <v-tab> Address </v-tab>
             <v-tab> Login </v-tab>
           </v-tabs>
@@ -49,13 +49,18 @@
             <v-tab-item>
               <v-list-item three-line>
                 <v-list-item-content>
-                  <v-list-item-title> </v-list-item-title>
-                  <v-list-item-subtitle>
-                    Secondary line text Lorem ipsum dolor sit amet,
+                  <v-list-item-title class="text-h6">
+                    Allergies
+                  </v-list-item-title>
+                  <span class="gray--text ma-2">Foods: </span>
+                  <v-list-item-subtitle
+                    class="mx-3"
+                    v-for="foodAllergy in allergies.foods"
+                    :key="foodAllergy.id"
+                  >
+                    {{ foodAllergy.name }}
                   </v-list-item-subtitle>
-                  <v-list-item-subtitle>
-                    consectetur adipiscing elit.
-                  </v-list-item-subtitle>
+                  <v-list-item-subtitle> </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
             </v-tab-item>
@@ -68,11 +73,11 @@
                     {{ patient.location.country }}
                   </v-list-item-subtitle>
                   <v-list-item-subtitle>
-                    <span class="font-weight-bold">Estado: </span>
+                    <span class="font-weight-bold">State: </span>
                     {{ patient.location.state }}
                   </v-list-item-subtitle>
                   <v-list-item-subtitle>
-                    <span class="font-weight-bold">Cidade: </span>
+                    <span class="font-weight-bold">City: </span>
                     {{ patient.location.city }}
                   </v-list-item-subtitle>
                   <v-list-item-subtitle>
@@ -85,8 +90,8 @@
 
             <v-tab-item>Teste 3</v-tab-item>
           </v-tabs-items>
-          <v-card-title class="justify-center"> </v-card-title>
-          <v-card-subtitle class="text-center"> Informations </v-card-subtitle>
+          <!-- <v-card-title class="justify-center"> </v-card-title> -->
+          <!-- <v-card-subtitle class="text-center"> Informations </v-card-subtitle> -->
         </v-card>
       </v-col>
     </v-row>
@@ -110,6 +115,40 @@ export default {
 
   data: () => ({
     tab: null,
+    allergies: {
+      drugs: [
+        {
+          id: 1,
+          name: 'AES',
+        },
+        {
+          id: 2,
+          name: 'Ayspinea',
+        },
+        {
+          id: 3,
+          name: 'Paracetyleno',
+        },
+        {
+          id: 4,
+          name: 'Dypiron',
+        },
+        {
+          id: 5,
+          name: 'Lastry',
+        },
+      ],
+      foods: [
+        {
+          id: 1,
+          name: 'Peanut',
+        },
+        {
+          id: 2,
+          name: 'Shrimp',
+        },
+      ],
+    },
   }),
 
   computed: {
