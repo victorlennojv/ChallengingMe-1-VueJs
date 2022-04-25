@@ -1,5 +1,5 @@
 <template>
-  <v-app light class="bg-color">
+  <v-app light>
     <v-container fluid class="pa-0">
       <Nuxt />
     </v-container>
@@ -14,6 +14,6 @@ export default {
 </script>
 <style scoped>
 .bg-color {
-  background-color: rgb(216, 216, 216);
+  background-color: rgb(247, 244, 255);
 }
 </style>
